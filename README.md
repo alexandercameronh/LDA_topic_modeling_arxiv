@@ -21,3 +21,6 @@ python join_files.py --load_directory /home/ubuntu/Arxiv_text_data/data --save_a
 ```
 
 Now feel free to run the Jupyter Notebook, just make sure to change the file path of the csv file
+
+!(pyldavis.png)[pyldavis.png]
+
