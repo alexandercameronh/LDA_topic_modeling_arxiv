@@ -1,0 +1,16 @@
+
+# big stuffs
+*.csv
+
+# ignore data folder
+
+Arxiv_text_data/
+
+# pycharm, osx filesystem
+*.idea
+**/.DS_Store
+.DS_Store
+.ipynb_checkpoints
+
+*.mm.index
+*.mm
