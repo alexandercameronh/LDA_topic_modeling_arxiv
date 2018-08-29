@@ -59,16 +59,16 @@ def cut_table(full_table, keep=0.5):
 	-------
 	Shorter DataFrame than original
 
-	>>> df
-		A B C D
-              0 0 1 2 3
-	      1 2 5 2 6
-              2 0 9 9 9
-              3 8 9 1 1
-	>>> df.cut_table(df, keep=0.5)
-		A B C D
-              0 0 1 2 3
-	      3 8 9 1 1
+    >>> df
+      A B C D
+    0 0 1 2 3
+    1 2 5 2 6
+    2 0 9 9 9
+    3 8 9 1 1
+    >>> df.cut_table(df, keep=0.5)
+      A B C D
+    0 0 1 2 3 
+    3 8 9 1 1
 	"""
 
     indices = list(full_table.index)
