@@ -18,7 +18,6 @@ def join_files(directory_path=None):
     
     Parameters
     ----------
-    
     filepath : str
         Filepath to directory containing JSON file(s)
         
@@ -51,7 +50,6 @@ def cut_table(full_table, keep=0.5):
 
 	Parameters
 	----------
-
 	full_table, DataFrame
 		DataFrame to be cut
 	keep, int or real-value in (0,1)
@@ -98,9 +96,7 @@ def trim_table(dataframe, columns_to_keep):
     -------
     result : DataFrame
     """
-#    if isinstance(columns_to_keep, str):
-#        columns_to_keep = list(columns_to_keep)
-#        print(columns_to_keep)
+
     cols_remove = [x for x in list(dataframe.columns) if x not in columns_to_keep]
     dataframe = dataframe.drop(cols_remove, axis=1, inplace=False)
     return dataframe
@@ -112,7 +108,7 @@ def clean_text(x, tokenized=True):
     Parameters
     ----------
     x : str
-    tokenized: boolean, default True
+    tokenized : boolean, default True
         Specify if resulting string to be tokenized
         
     Returns
@@ -133,6 +129,16 @@ def clean_text(x, tokenized=True):
         return ' '.join(description)
 
 def remove_stopwords(description):
+    """Removes stopwords found in NLTK's generic stopwords list.
+
+    Parameters
+    ----------
+    description : tokenized list of string elements
+
+    Returns
+    -------
+    destription : tokenize list of string elements, not including stopwords   
+    """
     stoplist = stopwords.words('english')
     description = [word.lower() for word in description if word not in stoplist]
     return description
